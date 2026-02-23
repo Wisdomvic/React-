@@ -29,10 +29,5 @@ Run the app:
 
 npm start
 
-## 📸 Screenshot
-
-(Add screenshot here later)
-
 ## ✍️ Author
-
-Your Name
+wisdom
