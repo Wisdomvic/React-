@@ -1,0 +1,526 @@
+/* ── GOOGLE FONT ── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── CSS VARIABLES ── */
+:root {
+    --bg-color: #0a1628;
+    --card-color: #112240;
+    --card-hover: #1a3a6e;
+    --text-color: #e8f4fd;
+    --muted-color: #7a9ab8;
+    --accent-color: #64ffda;
+    --accent-blue: #4a90d9;
+    --danger-color: #ff6b6b;
+    --success-color: #4ade80;
+    --border-color: #1e3a5f;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 20px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── BASE BODY ── */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ── HEADER ── */
+header.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(10, 22, 40, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+header h2 {
+    font-family: var(--font-head);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    letter-spacing: -0.5px;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-blue));
+    color: #0a1628;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.90rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-color);
+    color: #0a1628;
+    transform: translateY(-2px);
+}
+
+.btn-tertiary {
+    background: var(--accent-blue);
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-tertiary:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: transparent;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-danger:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* ── MAIN LAYOUT ── */
+main, body > div.box,
+body > div.history,
+body > div.insights,
+body > div.contact {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ── CARDS / BOX ── */
+.box {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin: 24px auto;
+    max-width: 860px;
+    box-shadow: var(--shadow);
+    transition: border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-blue));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.box:hover::before {
+    opacity: 1;
+}
+
+.history {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin: 24px auto;
+    max-width: 860px;
+    box-shadow: var(--shadow);
+}
+
+.insights {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin: 24px auto;
+    max-width: 860px;
+    box-shadow: var(--shadow);
+}
+
+.contact {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin: 24px auto;
+    max-width: 860px;
+    box-shadow: var(--shadow);
+}
+
+/* ── HEADINGS ── */
+h2, h3, h4 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+/* ── FORM ELEMENTS ── */
+label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--muted-color);
+    margin-bottom: 6px;
+    margin-top: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    margin-bottom: 4px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: var(--accent-color);
+    background: rgba(100, 255, 218, 0.05);
+}
+
+select option {
+    background: var(--card-color);
+    color: var(--text-color);
+}
+
+/* ── RANGE SLIDER ── */
+input[type="range"] {
+    width: 100%;
+    appearance: none;
+    background: var(--border-color);
+    height: 6px;
+    border-radius: 4px;
+    outline: none;
+    margin: 10px 0 4px;
+    padding: 0;
+    border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(100, 255, 218, 0.5);
+    transition: transform 0.15s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* ── OUTPUT / SEVERITY DISPLAY ── */
+output {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #0a1628;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-left: 10px;
+    min-width: 36px;
+    text-align: center;
+}
+
+/* ── PARAGRAPH / DESCRIPTION ── */
+p {
+    color: var(--muted-color);
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+}
+
+/* ── HISTORY CARDS ── */
+.history-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+}
+
+.history-card:hover {
+    border-color: var(--accent-blue);
+}
+
+.history-card-info .date {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.history-card-info .area {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-head);
+    margin-bottom: 4px;
+}
+
+.history-card-info .note {
+    font-size: 0.82rem;
+    color: var(--muted-color);
+}
+
+.history-card-severity {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-align: right;
+}
+
+.history-card-severity small {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--muted-color);
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+/* ── PATTERN INSIGHTS ── */
+#frequent, #worst {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+}
+
+#frequent strong, #worst strong {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-family: var(--font-head);
+    margin-right: 6px;
+}
+
+/* Severity Bars */
+.severity-bars {
+    margin-top: 16px;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.bar-label {
+    font-size: 0.75rem;
+    color: var(--muted-color);
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.bar-container {
+    flex: 1;
+    height: 10px;
+    background: var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-blue));
+    border-radius: 5px;
+    transition: width 0.6s ease;
+    min-width: 2%;
+}
+
+.bar-count {
+    font-size: 0.78rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    width: 25px;
+    text-align: right;
+}
+
+/* ── CONTACT CARDS ── */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+}
+
+.contact-card:hover {
+    border-color: var(--accent-blue);
+}
+
+.contact-card-info .contact-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.contact-card-info .contact-number {
+    font-size: 0.82rem;
+    color: var(--muted-color);
+}
+
+.contact-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-copy {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-copy:hover {
+    background: var(--accent-color);
+    color: #0a1628;
+}
+
+/* ── EMPTY STATE ── */
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted-color);
+    font-size: 0.88rem;
+}
+
+.empty-state .empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ── FOOTER ── */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted-color);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+
+.footer p span {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    header.container {
+        padding: 16px 20px;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    .box, .history, .insights, .contact {
+        padding: 20px 18px;
+        margin: 16px auto;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>SymptomSense</title>
+</head>
+<body>
+    <header class="container">
+        <h2>SymptomSense</h2>
+        <button class="btn-primary">Get started</button>
+        
+    </header>
+
+    <!-- Symptom Logger   -->
+     <div class="box symptom-logger">
+
+        <h3>Symptom Logger</h3>
+          <p>Select body area</p>
+        
+          <select name="dropdown" id="category">
+            
+            <option value="head">Head</option>
+            <option value="chest">Chest</option>
+            <option value="stomach">Stomach</option>
+
+          </select>
+
+    <label>Severity:</label>
+<input type="range" min="1" max="10" id="severity">
+<output id="severity-value">6</output>
+<br>
+ <label for="text">Short note</label>
+     <input type="text" name="text" id="text" placeholder="Write down your problem">
+
+<button class="btn-secondary" id="save-btn"> Save Symptom  </button>
+     <br>
+</div>
+
+<!-- Health history -->
+<div class="box history">
+<h3>Health History Timeline </h3>
+<p>Here is where all your previous reviews are stored</p>
+<div id="history-list"></div>
+</div>
+
+
+<!-- Pattern Insights -->
+<div class="box insights">
+    <h3>Pattern Insights</h3>
+    <div id="frequent">Most frequent symptom here</div>
+    <div id="worst">Worst day here</div>
+    <div id="bars">Severity bars here</div>
+</div>
+
+<!-- Emergency Contacts -->
+ <div class="box contact">
+    <h4>Emergency Contact</h4>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name"  placeholder="Enter contact name">
+ <label for="number">Phone number:</label>
+<input type="tel" name="number" id="number">
+
+<button class="btn-tertiary" id="save-contact-btn">Save</button>
+
+<!-- Div list -->
+ <div id="contact"></div>
+ </div>
+
+ <footer>
+    <p>Built by smart - 2026</p>
+ </footer>
+ 
+</body>
+</html>
