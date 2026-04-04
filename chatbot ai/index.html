@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBug - AI Code Debugger</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>DevBug 🐛</h1>
+        <p>Debug Code Faster with AI</p>
+       <button id="theme-toggle">🌙 Dark Mode</button>  
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Code Input Section -->
+        <section class="code-section">
+            <h2>Enter Your Code</h2>
+         <!-- Language selector -->
+            <select id="language-selector">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+            </select>
+
+            <textarea id="code-input" placeholder="Paste your buggy code here..."></textarea>
+           <button class="btn-primary" onclick="debugCode()">🔍 Analyze Bug</button> 
+        </section>
+
+        <!-- AI Output Section -->
+        <section class="ai-section">
+            <h2>AI Suggestions</h2>
+            <div id="ai-output" class="output"></div>
+        </section>
+
+        <!-- Chat Section -->
+        <section class="chat-section">
+            <h2>Chat with AI</h2>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="chat-input" placeholder="Ask for more help...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DevBug. Powered by build with victor.</p>
+    </footer>
+
+</body>
+</html>
